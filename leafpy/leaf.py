@@ -1,4 +1,7 @@
 from auth import login
+import requests
+
+BASE_URL = 'https://gdcportalgw.its-mo.com/gworchest_160803A/gdc/'
 
 class Leaf(object):
     """Make requests to the Nissan Connect API to get Leaf Info"""
@@ -7,11 +10,33 @@ class Leaf(object):
 
     def __init__(self, username=None, password=None, custom_sessionid=None, VIN=None):
 
-    	# If you instantiate with a username & password, login.
+        # If you instantiate with a username & password, login.
         if username and password:
-        	self.custom_sessionid, self.VIN = login(username, password)
+            self.custom_sessionid, self.VIN = login(username, password)
         elif custom_sessionid and VIN:
-        	self.custom_sessionid = custom_sessionid
-        	self.VIN = VIN
+            self.custom_sessionid = custom_sessionid
+            self.VIN = VIN
         else:
-        	raise Exception('Need either username & password or custom_sessionid & VIN.')
+            raise Exception('Need either username & password or custom_sessionid & VIN.')
+
+    def __getattr__(self, name):
+        """
+        All methods that don't require input data
+        """
+
+        def call(**kwargs):
+            url = BASE_URL + name + '.php'
+            data = {
+                "RegionCode": 'NNA',
+                "custom_sessionid": self.custom_sessionid,
+                "VIN": self.VIN
+            }
+            for k in kwargs:
+                data[k] = kwargs[k]
+            r = requests.post(url, data=data)
+            r.raise_for_status()
+            if not r.json()['status'] == 200:
+            	raise Exception('Error making request.  Perhaps the session has expired.')
+            return r.json()
+
+        return call
