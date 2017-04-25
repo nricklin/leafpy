@@ -65,7 +65,7 @@ results in:
 -----
 ```python
 response = leaf.BatteryStatusCheckRequest()
-# probably what a few seconds for the request to be made to the car
+# Wait a few seconds for the request to be made to the car
 leaf.BatteryStatusCheckResultRequest(resultKey=response['resultKey'])
 ```
 results in:
