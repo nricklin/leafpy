@@ -161,8 +161,32 @@ results in:
 	}
 }
 ```
-*Start Charging*
+*Start Charging:*
 -----
 ```python
 leaf.BatteryRemoteChargingRequest()
+```
+
+*Schedule Climate Control:*
+-----
+```python
+leaf.ACRemoteNewRequest(ExecuteTime='2016-02-09 17:24')
+```
+
+*Update Scheduled Climate Control:*
+-----
+```python
+leaf.ACRemoteUpdateRequest(ExecuteTime='2016-02-09 17:24')
+```
+
+*Cancel Scheduled Climate Control:*
+-----
+```python
+leaf.ACRemoteCancelRequest()
+```
+
+*Get Climate Control Schedule:*
+-----
+```python
+leaf.GetScheduledACRemoteRequest()
 ```
