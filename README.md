@@ -5,7 +5,7 @@ lightweight python interface to the nissan leaf
 
 # Installation
 ```
-pip insall leafpy
+pip install leafpy
 ```
 
 # Examples:
