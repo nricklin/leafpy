@@ -1,8 +1,7 @@
 # leafpy
 lightweight python interface to the nissan leaf
 
-.. image:: https://badge.fury.io/py/leafpy.svg
-    :target: https://badge.fury.io/py/leafpy
+[![PyPI version](https://badge.fury.io/py/leafpy.svg)](https://badge.fury.io/py/leafpy)
 
 # Installation
 ```
