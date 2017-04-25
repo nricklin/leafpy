@@ -10,7 +10,8 @@ pip insall leafpy
 
 # Examples:
 
-*Login with username & password:*
+Login:
+----
 
 ```python
 from leafpy import Leaf
@@ -27,24 +28,36 @@ leaf = Leaf(custom_sesionid='<your-custom_sessionid>', VIN='<your-VIN>')
 ```
 
 *Check Battery Status:*
+-----
 ```python
 leaf.BatteryStatusRecordsRequest()
 ```
-and you get the raw output from the API:
-```python
-{   u'BatteryStatusRecords': {   u'BatteryStatus': {   u'BatteryCapacity': u'240',
-                                                       u'BatteryChargingStatus': u'NOT_CHARGING',
-                                                       u'BatteryRemainingAmount': u'240',
-                                                       u'BatteryRemainingAmountWH': u'28880',
-                                                       u'BatteryRemainingAmountkWH': u'',
-                                                       u'SOC': {   u'Value': u'100'}},
-                                 u'CruisingRangeAcOff': u'198000',
-                                 u'CruisingRangeAcOn': u'192000',
-                                 u'NotificationDateAndTime': u'2017/04/24 23:43',
-                                 u'OperationDateAndTime': u'2017/04/24 23:43',
-                                 u'OperationResult': u'START',
-                                 u'PluginState': u'CONNECTED',
-                                 u'TargetDate': u'2017/04/24 23:43'},
-    u'VoltLabel': {   u'HighVolt': u'240', u'LowVolt': u'120'},
-    u'status': 200}
+results in:
+```json
+{
+	"status": 200,
+	"BatteryStatusRecords": {
+		"BatteryStatus": {
+			"BatteryRemainingAmountkWH": "",
+			"SOC": {
+				"Value": "100"
+			},
+			"BatteryChargingStatus": "NOT_CHARGING",
+			"BatteryRemainingAmount": "240",
+			"BatteryCapacity": "240",
+			"BatteryRemainingAmountWH": "28880"
+		},
+		"OperationResult": "START",
+		"NotificationDateAndTime": "2017/04/24 23:43",
+		"CruisingRangeAcOff": "198000",
+		"OperationDateAndTime": "2017/04/24 23:43",
+		"CruisingRangeAcOn": "192000",
+		"PluginState": "CONNECTED",
+		"TargetDate": "2017/04/24 23:43"
+	},
+	"VoltLabel": {
+		"HighVolt": "240",
+		"LowVolt": "120"
+	}
+}
 ```
