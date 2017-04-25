@@ -61,3 +61,40 @@ results in:
 	}
 }
 ```
+*Query for Battery Status:*
+-----
+```python
+response = leaf.BatteryStatusCheckRequest()
+# probably what a few seconds for the request to be made to the car
+leaf.BatteryStatusCheckResultRequest(resultKey=response['resultKey'])
+```
+results in:
+```json
+{
+	"status": 200,
+	"currentChargeLevel": "0",
+	"timeRequiredToFull": {
+		"hours": "",
+		"minutes": ""
+	},
+	"timeRequiredToFull200_6kW": {
+		"hours": "",
+		"minutes": ""
+	},
+	"operationResult": "START",
+	"timeStamp": "2017-04-25 05:23:48",
+	"pluginState": "CONNECTED",
+	"cruisingRangeAcOff": "198000.0",
+	"timeRequiredToFull200": {
+		"hours": "",
+		"minutes": ""
+	},
+	"batteryCapacity": "240",
+	"cruisingRangeAcOn": "192000.0",
+	"responseFlag": "1",
+	"batteryDegradation": "240",
+	"charging": "NO",
+	"chargeStatus": "CT",
+	"chargeMode": "NOT_CHARGING"
+}
+```
