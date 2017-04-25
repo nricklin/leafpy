@@ -1,15 +1,24 @@
 # leafpy
 lightweight python interface to the nissan leaf
 
+.. image:: https://badge.fury.io/py/leafpy.svg
+    :target: https://badge.fury.io/py/leafpy
 
-# Login with Username & Password:
+# Installation
+```
+pip insall leafpy
+```
+
+# Examples:
+
+*Login with username & password:*
 
 ```python
 from leafpy import Leaf
 leaf = Leaf('<your-username>', '<your-password>')
 ```
 
-This takes a while, so it's recommended that you cache somewhere your VIN & custom_sessionid and instantiate like so:
+This takes a while, so it's recommended that you cache somewhere your VIN & custom_sessionid and instantiate like this:
 
 ```python
 from leafpy import Leaf
@@ -18,7 +27,7 @@ leaf = Leaf(custom_sesionid='<your-custom_sessionid>', VIN='<your-VIN>')
 # leaf.VIN, leaf.custom_sessionid
 ```
 
-# Check Battery Status:
+*Check Battery Status:*
 ```python
 leaf.BatteryStatusRecordsRequest()
 ```

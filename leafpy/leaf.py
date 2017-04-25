@@ -10,7 +10,6 @@ class Leaf(object):
 
     def __init__(self, username=None, password=None, custom_sessionid=None, VIN=None):
 
-        # If you instantiate with a username & password, login.
         if username and password:
             self.custom_sessionid, self.VIN = login(username, password)
         elif custom_sessionid and VIN:
@@ -21,7 +20,7 @@ class Leaf(object):
 
     def __getattr__(self, name):
         """
-        All methods that don't require input data
+        Top secret magic.  Calling Leaf.<some_function_name>() hits <some_function_name>.php
         """
 
         def call(**kwargs):
