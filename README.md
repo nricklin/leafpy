@@ -98,3 +98,42 @@ results in:
 	"chargeMode": "NOT_CHARGING"
 }
 ```
+
+*Turn on Climate Control:*
+-----
+```python
+response = leaf.ACRemoteRequest()
+# Wait a few seconds for the request to be made to the car
+# Check status if you don't want to assume it worked:
+leaf.ACRemoteResult(resultKey=response['resultKey'])
+```
+results in:
+```json
+{
+	"status": 200,
+	"hvacStatus": "ON",
+	"operationResult": "START",
+	"timeStamp": "2017-04-25 05:38:09",
+	"acContinueTime": "7200",
+	"responseFlag": "1"
+}
+```
+
+*Turn off Climate Control:*
+-----
+```python
+response = leaf.ACRemoteOffRequest()
+# Wait a few seconds for the request to be made to the car
+# Check status if you don't want to assume it worked:
+leaf.ACRemoteOffResult(resultKey=response['resultKey'])
+```
+results in:
+```json
+{
+	"status": 200,
+	"timeStamp": "2017-04-25 05:40:27",
+	"hvacStatus": "OFF",
+	"operationResult": "START",
+	"responseFlag": "1"
+}
+```
