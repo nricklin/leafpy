@@ -18,7 +18,7 @@ from leafpy import Leaf
 leaf = Leaf('<your-username>', '<your-password>')
 ```
 
-This takes a while, so it's recommended that you cache somewhere your VIN & custom_sessionid and instantiate like this:
+Or with custom_sessionid & VIN:
 
 ```python
 from leafpy import Leaf
