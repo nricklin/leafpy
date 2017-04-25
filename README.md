@@ -137,3 +137,32 @@ results in:
 	"responseFlag": "1"
 }
 ```
+
+*Get latest climate control status:*
+-----
+```python
+leaf.RemoteACRecordsRequest()
+```
+results in:
+```json
+{
+	"status": 200,
+	"RemoteACRecords": {
+		"ACDurationPluggedSec": "7200",
+		"ACStartStopDateAndTime": "2017/04/25 05:40",
+		"ACStartStopURL": "",
+		"PreAC_temp": "75",
+		"OperationResult": "START",
+		"PreAC_unit": "F",
+		"OperationDateAndTime": "2017/04/25 05:40",
+		"PluginState": "CONNECTED",
+		"ACDurationBatterySec": "900",
+		"RemoteACOperation": "STOP"
+	}
+}
+```
+*Start Charging*
+-----
+```python
+leaf.BatteryRemoteChargingRequest()
+```
