@@ -190,3 +190,15 @@ leaf.ACRemoteCancelRequest()
 ```python
 leaf.GetScheduledACRemoteRequest()
 ```
+
+*Get Driving Analysis:*
+-----
+```python
+leaf.DriveAnalysisBasicScreenRequestEx()
+```
+
+*Get Price Simulation:*
+-----
+```python
+leaf.PriceSimulatorDetailInfoRequest()
+```
