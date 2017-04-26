@@ -1,7 +1,8 @@
 # leafpy
 Lightweight python interface to the nissan leaf.  Check battery status, turn on the AC, start charging, etc.
 
-[![PyPI version](https://badge.fury.io/py/leafpy.svg)](https://badge.fury.io/py/leafpy)
+[![PyPI version](https://badge.fury.io/py/leafpy.svg)](https://badge.fury.io/py/leafpy) 
+[![Build Status](https://travis-ci.org/nricklin/leafpy.svg?branch=master)](https://travis-ci.org/nricklin/leafpy)
 
 # Installation
 ```
