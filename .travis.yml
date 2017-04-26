@@ -1,13 +1,13 @@
 language: python
 python:
   - "2.7"
-  - "3.3"
-  - "3.4"
-  - "3.5"
+#  - "3.3"
+#  - "3.4"
+#  - "3.5"
 # command to install dependencies
 install:
-  - pip install -r requirements.txt
+  - pip install -r requirements.txt codecov
 # command to run tests
-script: python unit_tests.py
-#after_success:
-#  - bash <(curl -s https://codecov.io/bash)
+script: codecov run unit_tests.py
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

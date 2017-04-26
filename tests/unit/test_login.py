@@ -1,5 +1,5 @@
 import unittest
-from .leafpy import Leaf
+from leafpy import Leaf
 import vcr
 
 USERNAME = 'dummyuser'
