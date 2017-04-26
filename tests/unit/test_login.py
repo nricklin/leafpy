@@ -1,5 +1,6 @@
 import unittest
 from leafpy import Leaf
+from leafpy.auth import login
 import vcr
 
 USERNAME = 'dummyuser'
@@ -51,3 +52,12 @@ class LoginTests(unittest.TestCase):
     def test_login_with_no_args_raises_exception(self):
         with self.assertRaises(Exception):
             leaf = Leaf()
+
+    @vcr.use_cassette('tests/unit/cassettes/test_login_standalone.yaml', 
+        filter_post_data_parameters=['UserId','Password'])
+    def test_login_standalone(self):
+        csid, VIN = login(USERNAME,PASSWORD)
+
+        assert csid == 'csessid'
+        assert VIN == 'vin123'
+
