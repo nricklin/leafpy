@@ -1,0 +1,23 @@
+interactions:
+- request:
+    body: !!python/unicode 'RegionCode=NNA&VIN=vin345&custom_sessionid=csid123'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['50']
+      Content-Type: [application/x-www-form-urlencoded]
+      User-Agent: [python-requests/2.13.0]
+    method: POST
+    uri: https://gdcportalgw.its-mo.com/gworchest_160803A/gdc/BatteryStatusRecordsRequest.php
+  response:
+    body: {string: !!python/unicode '{"status":404}'}
+    headers:
+      connection: [Keep-Alive]
+      content-type: [text/html; charset=UTF-8]
+      date: ['Wed, 26 Apr 2017 00:31:23 GMT']
+      keep-alive: ['timeout=120, max=100']
+      server: [Apache]
+      strict-transport-security: [max-age=15768000]
+    status: {code: 200, message: OK}
+version: 1

@@ -1,0 +1,24 @@
+interactions:
+- request:
+    body: !!python/unicode 'initial_app_strings=geORNtsZe5I4lRGjG9GZiA&RegionCode=NNA'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['127']
+      Content-Type: [application/x-www-form-urlencoded]
+      User-Agent: [python-requests/2.13.0]
+    method: POST
+    uri: https://gdcportalgw.its-mo.com/gworchest_160803A/gdc/UserLoginRequest.php
+  response:
+    body: {string: !!python/unicode '{"status":200,"sessionId":"aasdfasdf","VehicleInfoList":{"VehicleInfo":[{"charger20066":"false","nickname":"LEAF2017","telematicsEnabled":"true","vin":"vin123"}],"vehicleInfo":[{"charger20066":"false","nickname":"LEAF2017","telematicsEnabled":"true","vin":"vin123","custom_sessionid":"csessid"}]},"vehicle":{"profile":{"vin":"vin123","gdcUserId":"","gdcPassword":"","encAuthToken":"encauthtoken","dcmId":"dcmid","nickname":"nickname","status":"ACCEPTED","statusDate":"2017\/04\/15
+        00:00"}},"EncAuthToken":"encauthtoken","CustomerInfo":{"UserId":"userid","Language":"en-US","Timezone":"tz","RegionCode":"NNA","OwnerId":"ownerid","EMailAddress":"user@domain.com","Nickname":"nickname","Country":"US","VehicleImage":"\/content\/language\/default\/images\/img\/ph_car.jpg","UserVehicleBoundDurationSec":"12345","VehicleInfo":{"VIN":"vin123","DCMID":"dcmid","SIMID":"simid","NAVIID":"naviid","EncryptedNAVIID":"encnaviid","MSN":"msn","LastVehicleLoginTime":"","UserVehicleBoundTime":"2017-04-15T21:24:23Z","LastDCMUseTime":""}},"UserInfoRevisionNo":"1"}'}
+    headers:
+      connection: [Keep-Alive]
+      content-type: [application/json; charset=utf-8]
+      date: ['Wed, 26 Apr 2017 00:10:19 GMT']
+      keep-alive: ['timeout=120, max=100']
+      server: [Apache]
+      strict-transport-security: [max-age=15768000]
+    status: {code: 200, message: OK}
+version: 1
