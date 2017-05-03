@@ -22,11 +22,12 @@ def login(username, password, region_code='NNA', initial_app_strings='geORNtsZe5
 		"initial_app_strings": initial_app_strings,
 		"Password": encodedPassword,
 	}
+	headers = {'User-Agent': 'Mozilla/5.0'}
 
-	r = requests.post(url,data=data)
+	r = requests.post(url,data=data, headers=headers)
 	r.raise_for_status()
 	if not r.json()['status'] == 200:
-		raise Exception('Cannot login.  Probably username & password are wrong.')
+		raise Exception('Cannot login.  Probably username & password are wrong. ' + r.text)
 
 	custom_sessionid = r.json()['VehicleInfoList']['vehicleInfo'][0]['custom_sessionid']
 	VIN = r.json()['CustomerInfo']['VehicleInfo']['VIN']
