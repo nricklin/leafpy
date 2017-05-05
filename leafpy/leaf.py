@@ -23,6 +23,9 @@ class Leaf(object):
         Top secret magic.  Calling Leaf.<some_function_name>() hits <some_function_name>.php
         """
 
+        if name.startswith('__'):
+            raise AttributeError(name)
+
         def call(**kwargs):
             url = BASE_URL + name + '.php'
             data = {
