@@ -34,5 +34,3 @@ class APICallTests(unittest.TestCase):
 
         with self.assertRaises(Exception):
             response = leaf.this_doesnt_exist()
-
-    

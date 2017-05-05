@@ -1,4 +1,4 @@
-from auth import login
+from .auth import login
 import requests
 
 BASE_URL = 'https://gdcportalgw.its-mo.com/gworchest_160803A/gdc/'
