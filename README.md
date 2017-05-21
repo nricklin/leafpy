@@ -167,6 +167,7 @@ results in:
 
 *Get Car Location:*
 -----
+This just gets the most recent location.
 ```python
 leaf.MyCarFinderLatLng()
 ```
@@ -180,7 +181,12 @@ results in:
 	"TargetDate": "2017/04/25 05:47"
 }
 ```
-
+To query for location then get the result:
+```python
+response = leaf.MyCarFinderRequest()
+# now wait a while
+leaf.MyCarFinderResultRequest(resultKey=response['resultKey'])
+```
 
 *Start Charging:*
 -----
