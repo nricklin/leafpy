@@ -164,6 +164,24 @@ results in:
 	}
 }
 ```
+
+*Get Car Location:*
+-----
+```python
+leaf.MyCarFinderLatLng()
+```
+results in:
+```json
+{
+	"status": 200,
+	"receivedDate": "2017/04/25 05:47",
+	"lng": "-100.000000000",
+	"lat": "50.00000000",
+	"TargetDate": "2017/04/25 05:47"
+}
+```
+
+
 *Start Charging:*
 -----
 ```python
