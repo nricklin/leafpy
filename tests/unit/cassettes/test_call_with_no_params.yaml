@@ -9,7 +9,7 @@ interactions:
       Content-Type: [application/x-www-form-urlencoded]
       User-Agent: [python-requests/2.13.0]
     method: POST
-    uri: https://gdcportalgw.its-mo.com/gworchest_160803A/gdc/BatteryStatusRecordsRequest.php
+    uri: https://gdcportalgw.its-mo.com/api_v180117_NE/gdc/BatteryStatusRecordsRequest.php
   response:
     body: {string: !!python/unicode '{"status":200,"VoltLabel":{"HighVolt":"240","LowVolt":"120"},"BatteryStatusRecords":{"OperationResult":"START","OperationDateAndTime":"2017\/04\/26
         01:16","BatteryStatus":{"BatteryChargingStatus":"NORMAL_CHARGING","BatteryCapacity":"240","BatteryRemainingAmount":"180","BatteryRemainingAmountWH":"20480","BatteryRemainingAmountkWH":"","SOC":{"Value":"71"}},"PluginState":"CONNECTED","CruisingRangeAcOn":"153000","CruisingRangeAcOff":"159000","TimeRequiredToFull":{"HourRequiredToFull":"16","MinutesRequiredToFull":"30"},"NotificationDateAndTime":"2017\/04\/26

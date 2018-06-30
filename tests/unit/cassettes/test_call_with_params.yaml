@@ -9,7 +9,7 @@ interactions:
       Content-Type: [application/x-www-form-urlencoded]
       User-Agent: [python-requests/2.13.0]
     method: POST
-    uri: https://gdcportalgw.its-mo.com/gworchest_160803A/gdc/BatteryStatusCheckRequest.php
+    uri: https://gdcportalgw.its-mo.com/api_v180117_NE/gdc/BatteryStatusCheckRequest.php
   response:
     body: {string: !!python/unicode '{"status":200,"userId":"dummyuser@domain.com","vin":"vin123","resultKey":"rkey"}'}
     headers:
@@ -30,7 +30,7 @@ interactions:
       Content-Type: [application/x-www-form-urlencoded]
       User-Agent: [python-requests/2.13.0]
     method: POST
-    uri: https://gdcportalgw.its-mo.com/gworchest_160803A/gdc/BatteryStatusCheckResultRequest.php
+    uri: https://gdcportalgw.its-mo.com/api_v180117_NE/gdc/BatteryStatusCheckResultRequest.php
   response:
     body: {string: !!python/unicode '{"status":200,"responseFlag":"1","operationResult":"START","timeStamp":"2017-04-26
         01:40:10","cruisingRangeAcOn":"157000.0","cruisingRangeAcOff":"163000.0","currentChargeLevel":"0","chargeMode":"110V","pluginState":"CONNECTED","charging":"YES","chargeStatus":"CT","batteryDegradation":"180","batteryCapacity":"240","timeRequiredToFull":{"hours":"","minutes":""},"timeRequiredToFull200":{"hours":"","minutes":""},"timeRequiredToFull200_6kW":{"hours":"","minutes":""}}'}
