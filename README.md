@@ -1,10 +1,5 @@
 # leafpydome
-Lightweight python interface to the nissan leaf.  Check battery status, turn on the AC, start charging, etc.
-
-[![PyPI version](https://badge.fury.io/py/leafpydome.svg)](https://badge.fury.io/py/leafpydome) 
-[![Build Status](https://travis-ci.org/nricklin/leafpydome.svg?branch=master)](https://travis-ci.org/nricklin/leafpydome)
-[![codecov](https://codecov.io/gh/nricklin/leafpydome/branch/master/graph/badge.svg)](https://codecov.io/gh/nricklin/leafpydome)
-
+Lightweight python interface to the nissan leaf based on the original leafpy by Nate Ricklin.  Check battery status, turn on the AC, start charging, etc.
 
 # Installation
 ```
