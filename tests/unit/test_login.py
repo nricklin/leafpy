@@ -1,6 +1,6 @@
 import unittest
-from leafpy import Leaf
-from leafpy.auth import login
+from leafpydome import Leaf
+from leafpydome.auth import login
 import vcr
 
 USERNAME = 'dummyuser'

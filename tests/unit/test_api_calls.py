@@ -1,5 +1,5 @@
 import unittest
-from leafpy import Leaf
+from leafpydome import Leaf
 import vcr, time
 
 VIN = 'dummyvin'
