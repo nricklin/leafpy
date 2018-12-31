@@ -1,4 +1,4 @@
 requests
-pycrypto
+pycryptodome
 vcrpy
 pytest
