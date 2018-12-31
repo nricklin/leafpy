@@ -1,4 +1,4 @@
 requests
 pycrypto
 vcrpy
-pytest
+pytest==4.0.2
