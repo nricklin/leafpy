@@ -9,7 +9,7 @@ interactions:
       Content-Type: [application/x-www-form-urlencoded]
       User-Agent: [python-requests/2.13.0]
     method: POST
-    uri: https://gdcportalgw.its-mo.com/api_v180117_NE/gdc/BatteryStatusRecordsRequest.php
+    uri: https://gdcportalgw.its-mo.com/api_v181217_NE/gdc/BatteryStatusRecordsRequest.php
   response:
     body: {string: !!python/unicode '{"status":404}'}
     headers:
