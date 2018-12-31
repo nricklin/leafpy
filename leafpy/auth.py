@@ -15,7 +15,7 @@ def login(username, password, region_code='NNA', initial_app_strings='geORNtsZe5
 	encryptedPassword = c1.encrypt(packedPassword)
 	encodedPassword = base64.standard_b64encode(encryptedPassword)
 
-	url = "https://gdcportalgw.its-mo.com/api_v180117_NE/gdc/UserLoginRequest.php"
+	url = "https://gdcportalgw.its-mo.com/api_v181217_NE/gdc/UserLoginRequest.php"
 	data = {
 		"RegionCode": region_code,
 		"UserId": username,
