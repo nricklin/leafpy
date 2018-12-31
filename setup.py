@@ -18,7 +18,7 @@ setup(name='leafpy',
       packages=find_packages(exclude=['docs','tests','examples']),
       include_package_data=True,
       zip_safe=False,
-      install_requires=['requests','pycrypto'],
+      install_requires=['requests','pycryptodome'],
       setup_requires=['pytest-runner'],
       tests_require=['pytest','vcrpy']
 )
