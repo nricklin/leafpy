@@ -1,4 +1,4 @@
-requests
+requests==2.21.0
 pycrypto
 vcrpy
 pytest
