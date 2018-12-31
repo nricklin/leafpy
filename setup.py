@@ -7,7 +7,7 @@ if sys.version_info > (3,):
     open_kwds['encoding'] = 'utf-8'
 
 setup(name='leafpy',
-      version='0.2.3',
+      version='0.2.4',
       description='Lightweight python interface to the nissan leaf.',
       classifiers=[],
       keywords='',
