@@ -7,11 +7,14 @@ class Leaf(object):
     """Make requests to the Nissan Connect API to get Leaf Info"""
     custom_sessionid  = None
     VIN = None
+    region_code = None
 
-    def __init__(self, username=None, password=None, custom_sessionid=None, VIN=None):
+    def __init__(self, username=None, password=None, custom_sessionid=None, VIN=None, region_code='NNA'):
+
+        self.region_code = region_code
 
         if username and password:
-            self.custom_sessionid, self.VIN = login(username, password)
+            self.custom_sessionid, self.VIN = login(username, password, self.region_code)
         elif custom_sessionid and VIN:
             self.custom_sessionid = custom_sessionid
             self.VIN = VIN
@@ -29,7 +32,7 @@ class Leaf(object):
         def call(**kwargs):
             url = BASE_URL + name + '.php'
             data = {
-                "RegionCode": 'NNA',
+                "RegionCode": self.region_code,
                 "custom_sessionid": self.custom_sessionid,
                 "VIN": self.VIN
             }
