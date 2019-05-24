@@ -29,7 +29,10 @@ def login(username, password, region_code='NNA', initial_app_strings='geORNtsZe5
 	if not r.json()['status'] == 200:
 		raise Exception('Cannot login.  Probably username & password are wrong. ' + r.text)
 
-	custom_sessionid = r.json()['VehicleInfoList']['vehicleInfo'][0]['custom_sessionid']
+	if region_code == 'NE':
+		custom_sessionid = r.json()['vehicleInfo'][0]['custom_sessionid']
+	else:
+		custom_sessionid = r.json()['VehicleInfoList']['vehicleInfo'][0]['custom_sessionid']
 	VIN = r.json()['CustomerInfo']['VehicleInfo']['VIN']
 
 	return custom_sessionid, VIN
