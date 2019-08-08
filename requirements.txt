@@ -1,4 +1,4 @@
 requests
 pycryptodome
-vcrpy
+vcrpy==2.1.0
 pytest
