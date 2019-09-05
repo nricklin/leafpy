@@ -9,7 +9,7 @@ interactions:
       Content-Type: [application/x-www-form-urlencoded]
       User-Agent: [python-requests/2.13.0]
     method: POST
-    uri: https://gdcportalgw.its-mo.com/api_v181217_NE/gdc/this_doesnt_exist.php
+    uri: https://gdcportalgw.its-mo.com/api_v190426_NE/gdc/this_doesnt_exist.php
   response:
     body: {string: !!python/unicode '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 
@@ -21,18 +21,17 @@ interactions:
 
         <h1>Not Found</h1>
 
-        <p>The requested URL /api_v180117_NE/gdc/this_doesnt_exist.php was not
-        found on this server.</p>
+        <p>The requested URL /api_v190426_NE/gdc/this_doesnt_exist.php was not found
+        on this server.</p>
 
         </body></html>
 
         '}
     headers:
-      connection: [Keep-Alive]
-      content-length: ['241']
+      connection: [close]
+      content-length: ['238']
       content-type: [text/html; charset=iso-8859-1]
-      date: ['Wed, 26 Apr 2017 01:39:42 GMT']
-      keep-alive: ['timeout=120, max=100']
+      date: ['Thu, 05 Sep 2019 22:45:26 GMT']
       server: [Apache]
     status: {code: 404, message: Not Found}
 version: 1
