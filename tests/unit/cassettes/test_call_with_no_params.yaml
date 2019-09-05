@@ -9,16 +9,15 @@ interactions:
       Content-Type: [application/x-www-form-urlencoded]
       User-Agent: [python-requests/2.13.0]
     method: POST
-    uri: https://gdcportalgw.its-mo.com/api_v181217_NE/gdc/BatteryStatusRecordsRequest.php
+    uri: https://gdcportalgw.its-mo.com/api_v190426_NE/gdc/BatteryStatusRecordsRequest.php
   response:
-    body: {string: !!python/unicode '{"status":200,"VoltLabel":{"HighVolt":"240","LowVolt":"120"},"BatteryStatusRecords":{"OperationResult":"START","OperationDateAndTime":"2017\/04\/26
-        01:16","BatteryStatus":{"BatteryChargingStatus":"NORMAL_CHARGING","BatteryCapacity":"240","BatteryRemainingAmount":"180","BatteryRemainingAmountWH":"20480","BatteryRemainingAmountkWH":"","SOC":{"Value":"71"}},"PluginState":"CONNECTED","CruisingRangeAcOn":"153000","CruisingRangeAcOff":"159000","TimeRequiredToFull":{"HourRequiredToFull":"16","MinutesRequiredToFull":"30"},"NotificationDateAndTime":"2017\/04\/26
-        01:16","TargetDate":"2017\/04\/26 01:16"}}'}
+    body: {string: !!python/unicode '{"status":200,"VoltLabel":{"HighVolt":"240","LowVolt":"120"},"BatteryStatusRecords":{"OperationResult":"START","OperationDateAndTime":"2019\/09\/05
+        18:37","BatteryStatus":{"BatteryChargingStatus":"NOT_CHARGING","BatteryCapacity":"240","BatteryRemainingAmount":"240","BatteryRemainingAmountWH":"22880","BatteryRemainingAmountkWH":"","SOC":{"Value":"100"}},"PluginState":"CONNECTED","CruisingRangeAcOn":"152000","CruisingRangeAcOff":"158000","NotificationDateAndTime":"2019\/09\/05
+        18:37","TargetDate":"2019\/09\/05 18:37"}}'}
     headers:
-      connection: [Keep-Alive]
+      connection: [close]
       content-type: [application/json; charset=utf-8]
-      date: ['Wed, 26 Apr 2017 01:29:40 GMT']
-      keep-alive: ['timeout=120, max=100']
+      date: ['Thu, 05 Sep 2019 22:45:27 GMT']
       server: [Apache]
       strict-transport-security: [max-age=15768000]
     status: {code: 200, message: OK}
