@@ -165,28 +165,29 @@ results in:
 }
 ```
 
-*Get Car Location:*
------
-This just gets the most recent location.
+~~*Get Car Location:*~~
+~~-----~~
+~~This just gets the most recent location.~~
 ```python
 leaf.MyCarFinderLatLng()
 ```
-results in:
-```json
-{
+~~results in:~~
+```json~~
+~~{
 	"status": 200,
 	"receivedDate": "2017/04/25 05:47",
 	"lng": "-100.000000000",
 	"lat": "50.00000000",
 	"TargetDate": "2017/04/25 05:47"
-}
+}~~
 ```
-To query for location then get the result:
+~~To query for location then get the result:~~
 ```python
 response = leaf.MyCarFinderRequest()
 # now wait a while
 leaf.MyCarFinderResultRequest(resultKey=response['resultKey'])
 ```
+
 
 *Start Charging:*
 -----
