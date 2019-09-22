@@ -1,4 +1,4 @@
 requests
 pycryptodome
 vcrpy
-pytest
+pytest==5.1.3
