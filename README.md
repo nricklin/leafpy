@@ -15,10 +15,16 @@ pip install leafpy
 
 Login:
 ----
+You need to add the region_code if you're not from US.
+* COUNTRY_CANADA = 'NCI'
+* COUNTRY_US = 'NNA'
+* COUNTRY_EU = 'NE'
+* COUNTRY_AUSTRALIA = 'NMA'
+* COUNTRY_JAPAN = 'NML'
 
 ```python
 from leafpy import Leaf
-leaf = Leaf('<your-username>', '<your-password>')
+leaf = Leaf('<your-username>', '<your-password>', region_code = 'NE')
 ```
 
 Or with custom_sessionid & VIN:

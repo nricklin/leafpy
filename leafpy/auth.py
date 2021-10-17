@@ -15,7 +15,7 @@ def login(username, password, region_code='NNA', initial_app_strings='9s5rfKVuMr
 	encryptedPassword = c1.encrypt(packedPassword.encode('latin-1'))
 	encodedPassword = base64.standard_b64encode(encryptedPassword)
 
-	url = "https://gdcportalgw.its-mo.com/api_v190426_NE/gdc/UserLoginRequest.php"
+	url = "https://gdcportalgw.its-mo.com/api_v200413_NE/gdc/UserLoginRequest.php"
 	data = {
 		"RegionCode": region_code,
 		"UserId": username,
@@ -29,10 +29,7 @@ def login(username, password, region_code='NNA', initial_app_strings='9s5rfKVuMr
 	if not r.json()['status'] == 200:
 		raise Exception('Cannot login.  Probably username & password are wrong. ' + r.text)
 
-	if region_code == 'NE':
-		custom_sessionid = r.json()['vehicleInfo'][0]['custom_sessionid']
-	else:
-		custom_sessionid = r.json()['VehicleInfoList']['vehicleInfo'][0]['custom_sessionid']
+	custom_sessionid = r.json()['VehicleInfoList']['vehicleInfo'][0]['custom_sessionid']
 	VIN = r.json()['CustomerInfo']['VehicleInfo']['VIN']
 
 	return custom_sessionid, VIN
